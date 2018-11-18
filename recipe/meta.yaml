@@ -14,9 +14,9 @@ source:
   sha256: d9128e82ecd020eaf7115a77c510de7ea5a0025a2a240067b905618608e1b63b
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -53,8 +53,7 @@ about:
     probabilities, and normalizing constants in general, via different versions of bridge
     sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
