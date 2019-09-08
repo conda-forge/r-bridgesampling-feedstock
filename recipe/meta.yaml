@@ -1,4 +1,4 @@
-{% set version = '0.6-0' %}
+{% set version = '0.7-2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bridgesampling_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bridgesampling/bridgesampling_{{ version }}.tar.gz
-  sha256: 172da757014ea804c6c55761dde29a53c82e13cf6769b124da00ca07b1a64694
+  sha256: 64a44e92ccc2828261a71e2298901a8064b36df1bc2b8796d47a1bf26fb9a44d
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,7 +28,7 @@ requirements:
     - r-brobdingnag
     - r-matrix
     - r-coda
-    - r-mvtnorm
+    - r-mvnfast
     - r-scales
     - r-stringr
   run:
@@ -36,7 +36,7 @@ requirements:
     - r-brobdingnag
     - r-matrix
     - r-coda
-    - r-mvtnorm
+    - r-mvnfast
     - r-scales
     - r-stringr
 
@@ -47,12 +47,13 @@ test:
 
 about:
   home: https://github.com/quentingronau/bridgesampling
-  license: GPL (>= 2)
+  license: GPL-2
   summary: Provides functions for estimating marginal likelihoods, Bayes factors, posterior model
     probabilities, and normalizing constants in general, via different versions of bridge
     sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
@@ -61,20 +62,20 @@ extra:
 # Package: bridgesampling
 # Type: Package
 # Title: Bridge Sampling for Marginal Likelihoods and Bayes Factors
-# Version: 0.6-0
+# Version: 0.7-2
 # Authors@R: c(person(given="Quentin F.", family="Gronau", role=c("aut", "cre"), email="Quentin.F.Gronau@gmail.com", comment=c(ORCID="0000-0001-5510-6943")), person(given="Henrik", family="Singmann", role="aut", comment=c(ORCID="0000-0002-4842-3657")), person(given="Jonathan J.", family="Forster", role="ctb"), person(given="Eric-Jan", family="Wagenmakers", role="ths"), person(family="The JASP Team", role="ctb"), person("Jiqiang", "Guo", role = "ctb"), person("Jonah", "Gabry", role = "ctb"), person("Ben", "Goodrich", role = c("ctb")), person("Kees", "Mulder", role = c("ctb")), person("Perry", "de Valpine", role = c("ctb")) )
 # Depends: R (>= 3.0.0)
-# Imports: mvtnorm, Matrix, Brobdingnag, stringr, coda, parallel, scales, utils, methods
+# Imports: mvnfast, Matrix, Brobdingnag, stringr, coda, parallel, scales, utils, methods
 # Suggests: testthat, Rcpp, RcppEigen, R2jags, rjags, runjags, knitr, rmarkdown, R.rsp, BayesFactor, rstan, rstanarm, nimble, MCMCpack
 # Description: Provides functions for estimating marginal likelihoods, Bayes factors, posterior model probabilities, and normalizing constants in general, via different versions of bridge sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
 # License: GPL (>= 2)
 # LazyData: true
-# RoxygenNote: 6.1.0
+# RoxygenNote: 6.1.1
 # VignetteBuilder: knitr, R.rsp
 # URL: https://github.com/quentingronau/bridgesampling
 # NeedsCompilation: no
-# Packaged: 2018-10-21 13:22:13 UTC; henrik
+# Packaged: 2019-06-29 07:53:28 UTC; henrik
 # Author: Quentin F. Gronau [aut, cre] (<https://orcid.org/0000-0001-5510-6943>), Henrik Singmann [aut] (<https://orcid.org/0000-0002-4842-3657>), Jonathan J. Forster [ctb], Eric-Jan Wagenmakers [ths], The JASP Team [ctb], Jiqiang Guo [ctb], Jonah Gabry [ctb], Ben Goodrich [ctb], Kees Mulder [ctb], Perry de Valpine [ctb]
 # Maintainer: Quentin F. Gronau <Quentin.F.Gronau@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-10-21 21:20:03 UTC
+# Date/Publication: 2019-07-21 22:40:06 UTC
