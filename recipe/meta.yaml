@@ -28,7 +28,7 @@ requirements:
     - r-brobdingnag
     - r-matrix
     - r-coda
-    - r-mvnfast
+    - r-mvtnorm
     - r-scales
     - r-stringr
   run:
@@ -36,7 +36,7 @@ requirements:
     - r-brobdingnag
     - r-matrix
     - r-coda
-    - r-mvnfast
+    - r-mvtnorm
     - r-scales
     - r-stringr
 
