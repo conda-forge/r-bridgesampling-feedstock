@@ -1,4 +1,4 @@
-{% set version = '0.7-2' %}
+{% set version = "0.8-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bridgesampling_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bridgesampling/bridgesampling_{{ version }}.tar.gz
-  sha256: 64a44e92ccc2828261a71e2298901a8064b36df1bc2b8796d47a1bf26fb9a44d
+  sha256: 90c2ae55d4f24c6ea8cb21881c7b3b12fa5cdb02e254d722e0dd448f90a353be
 
 build:
   merge_build_host: True  # [win]
