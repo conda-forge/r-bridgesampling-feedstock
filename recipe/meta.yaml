@@ -1,4 +1,4 @@
-{% set version = "0.8-1" %}
+{% set version = "1.0-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bridgesampling_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bridgesampling/bridgesampling_{{ version }}.tar.gz
-  sha256: 90c2ae55d4f24c6ea8cb21881c7b3b12fa5cdb02e254d722e0dd448f90a353be
+  sha256: 9e182e15ba4e0a0fefd6edc58f1939fd971dd5c53c444ca9c1820bb2c1de90ab
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -48,12 +48,11 @@ test:
 about:
   home: https://github.com/quentingronau/bridgesampling
   license: GPL-2
-  summary: Provides functions for estimating marginal likelihoods, Bayes factors, posterior model
-    probabilities, and normalizing constants in general, via different versions of bridge
-    sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
+  summary: Provides functions for estimating marginal likelihoods, Bayes factors, posterior model probabilities, and normalizing constants in general, via different
+    versions of bridge sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
