@@ -3,7 +3,7 @@ About r-bridgesampling
 
 Home: https://github.com/quentingronau/bridgesampling
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bridgesampling-feedstock/blob/master/LICENSE.txt)
 
