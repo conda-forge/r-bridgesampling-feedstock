@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/quentingronau/bridgesampling
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Provides functions for estimating marginal likelihoods, Bayes factors, posterior model probabilities, and normalizing constants in general, via different versions of bridge sampling (Meng & Wong, 1996,  <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).
   license_family: GPL2
   license_file:
